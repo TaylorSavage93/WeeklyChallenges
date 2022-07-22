@@ -20,7 +20,8 @@ namespace ChallengesWithTestsMark8
 
         public double Subtract(double minuend, double subtrahend)
         {
-            return minuend - subtrahend;
+            var answer = minuend - subtrahend;
+            return answer;
         }
 
         public int Add(int number1, int number2)
@@ -34,11 +35,7 @@ namespace ChallengesWithTestsMark8
             {
                 return number1;
             }
-            else
-            {
-                return number2;
-            }
-            
+            return number2;
           
         }
 
@@ -49,8 +46,16 @@ namespace ChallengesWithTestsMark8
 
         public string GetGreeting(string nameOfPerson)
         {
-            var name = new ChallengesSet01();
-            return name.GetGreeting(nameOfPerson);
+            if(nameOfPerson == "")
+            {
+                return "Hello!";
+            }
+            else
+            {
+                return $"Hello, {nameOfPerson}!";
+            }
+            
+            return String.IsNullOrEmpty(nameOfPerson) ? "Hello!" : $"Hello, {nameOfPerson}!";
 
         }
 

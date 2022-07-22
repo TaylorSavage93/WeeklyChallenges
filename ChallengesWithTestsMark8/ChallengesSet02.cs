@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ChallengesWithTestsMark8
 {
@@ -7,7 +8,12 @@ namespace ChallengesWithTestsMark8
     {
         public bool CharacterIsALetter(char c)
         {
-            if (CharacterIsALetter(c))
+            return char.IsLetter(c);
+        }
+
+        public bool CountOfElementsIsEven(string[] vals)
+        {
+            if (vals.Length % 2 == 0)
             {
                 return true;
             }
@@ -15,14 +21,7 @@ namespace ChallengesWithTestsMark8
             {
                 return false;
             }
-        }
-
-        public bool CountOfElementsIsEven(string[] vals)
-        {
-            if (
-            {
-
-            }
+            //return vals.Length % 2 == 0;//
         }
 
         public bool IsNumberEven(int number)
@@ -35,51 +34,40 @@ namespace ChallengesWithTestsMark8
             {
                 return false;
             }
+            //return number % 2 == 0;//
         }
 
         public bool IsNumberOdd(int num)
         {
-            if (num % 2 == 0)
-            {
-                return false;
-            }
-            else
-            {
-                return true;
-            }
+            return num % 2 != 0;    
         }
 
         public double SumOfMinAndMax(IEnumerable<double> numbers)
         {
-            throw new NotImplementedException();
+            return numbers == null || numbers.Count() == 0 ? 0 : numbers.Min() + numbers.Max(); 
         }
 
         public int GetLengthOfShortestString(string str1, string str2)
         {
-            throw new NotImplementedException();
+            return str1.Length < str2.Length ? str1.Length : str2.Length;
+
+            //var list = new List<int>() {str1.Length, str2.Length};
+            //return list.Min
         }
 
         public int Sum(int[] numbers)
         {
             int sum = 0;
-            foreach(int number in numbers)
+            foreach(var item in numbers)
             {
-                sum += number;
+                sum += item;
             }
             return sum;
         }
 
         public int SumEvens(int[] numbers)
         {
-            var sum = 0;
-            for( var i = 0; i < numbers.Length; i++)
-            {
-                if (int[i] % 2)
-                {
-                    sum += numbers[i];
-                }
-                return sum;
-            }
+           
         }
 
         public bool IsSumOdd(List<int> numbers)
