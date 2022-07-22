@@ -1,5 +1,7 @@
 ﻿using System;
 
+
+
 namespace ChallengesWithTestsMark8
 {
     public class ChallengesSet01
@@ -47,12 +49,14 @@ namespace ChallengesWithTestsMark8
 
         public string GetGreeting(string nameOfPerson)
         {
-            throw new NotImplementedException();
+            var name = new ChallengesSet01();
+            return name.GetGreeting(nameOfPerson);
+            
         }
 
         public string GetHey()
         {
-            throw new NotImplementedException();
+            return "Hey";
         }
     }
 }
