@@ -67,17 +67,18 @@ namespace ChallengesWithTestsMark8
 
         public int SumEvens(int[] numbers)
         {
-           
+            return numbers == null || numbers.Length == 0 ? 0 : numbers.Where(x => x % 2 == 0).Sum();
+
         }
 
         public bool IsSumOdd(List<int> numbers)
         {
-            throw new NotImplementedException();
+            return numbers != null && numbers.Count != 0 && numbers.Sum() % 2 != 0;
         }
 
         public long CountOfPositiveOddsBelowNumber(long number)
         {
-            throw new NotImplementedException();
+            return number <= 0 ? 0 : number / 2; 
         }
     }
 }
